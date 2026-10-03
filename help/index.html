@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Help Center — Studic</title>
+  <meta name="description" content="Answers about Studic: focus modes, breaks, points and Pro, permissions, backups and fixes.">
+  <meta name="theme-color" content="#ffb076">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="Studic home"><img class="brand-logo brand-logo-light" src="../assets/img/studic-wordmark.png" width="130" height="40" alt="Studic"><img class="brand-logo brand-logo-dark" src="../assets/img/studic-wordmark-dark.png" width="130" height="40" alt="" aria-hidden="true"></a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../#features">Features</a>
+        <a href="../#modes">Modes</a>
+        <a href="../help/" aria-current="page">Help Center</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <a class="btn btn-primary header-cta" href="https://play.google.com/store/apps/details?id=com.amirsofteng.studic" rel="noopener" target="_blank">Get Studic</a>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="doc-hero">
+    <div class="container">
+      <span class="eyebrow">Studic</span>
+      <h1>Help <span class="gradient-text">Center</span></h1>
+      <p class="lead">Quick answers about focus modes, points and fixing common problems.</p>
+      <nav class="doc-tabs" aria-label="Pages">
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="./" aria-current="page">Help Center</a>
+      </nav>
+    </div>
+  </section>
+
+  <main class="page" id="main">
+    <nav class="topics" aria-label="Help topics">
+      <a href="#start">Getting started</a>
+      <a href="#modes">Modes</a>
+      <a href="#session">In a session</a>
+      <a href="#points">Points &amp; Pro</a>
+      <a href="#permissions">Setup</a>
+      <a href="#backup">Backup</a>
+      <a href="#fix">Fixes</a>
+    </nav>
+
+    <section id="start">
+      <h2 class="group-title">Getting started</h2>
+
+      <details class="acc">
+        <summary>What is Studic?</summary>
+        <div class="acc-body">
+          <p>Studic helps you focus on your studies. Use a simple timer, or a strict mode that keeps distracting apps closed until your study time is over.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Do I need an account or internet?</summary>
+        <div class="acc-body">
+          <p>No account is needed, and Studic works without internet. You only need to be online to watch an ad, buy or restore points, or read these Help pages.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>How do I start a session?</summary>
+        <div class="acc-body">
+          <ol class="steps">
+            <li>On <strong>Home</strong>, tap <strong>Start Focus</strong>.</li>
+            <li>Pick <strong>Normal</strong>, <strong>Deep</strong> or <strong>Schedule</strong>.</li>
+            <li>Choose how long, and for Deep, your apps. Then start.</li>
+          </ol>
+          <p>The first time you use Deep or Schedule, Studic guides you through a quick <a href="#permissions">one-time setup</a>.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Which phones does Studic work on?</summary>
+        <div class="acc-body">
+          <p>Android phones with Android 8.0 or newer. You can choose Light, Dark or your phone&rsquo;s own theme in <strong>Settings &rarr; Appearance</strong>.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="modes">
+      <h2 class="group-title">Focus modes</h2>
+
+      <details class="acc">
+        <summary>Normal mode</summary>
+        <div class="acc-body">
+          <ul class="checks">
+            <li>Free. It does not use points.</li>
+            <li>Does not block any apps.</li>
+            <li>You can tap <strong>Stop</strong> any time.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Deep mode</summary>
+        <div class="acc-body">
+          <ul class="checks">
+            <li>Strict. <strong>No early exit</strong>: the session ends when the timer ends.</li>
+            <li>Only your study apps (plus Phone and Messages) work. Other apps stay closed.</li>
+            <li>Uses points when it starts. See <a href="#points">Points &amp; Pro</a>.</li>
+            <li>Needs the quick one-time setup.</li>
+          </ul>
+          <p><strong>How long:</strong> 15 min, 30 min, 45 min, 1 hour, then every hour from 2 hours up to 12 hours.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Scheduled mode</summary>
+        <div class="acc-body">
+          <p>Set a daily study time and Studic starts a strict session for you. It follows the same rules, points and breaks as Deep.</p>
+          <p>Open <strong>Modes &rarr; Schedule &rarr; Manage</strong>, then add a schedule with:</p>
+          <ul>
+            <li>A name, start time and end time</li>
+            <li>The days of the week</li>
+            <li><strong>Auto-start</strong> on or off</li>
+            <li>A reminder 5 minutes before it starts</li>
+          </ul>
+          <p>Each schedule can be up to 12 hours, and all your schedules together can add up to 12 hours. Schedules that overlap can&rsquo;t be saved.</p>
+          <p>When a schedule starts and you are in another app, Studic brings you back to your timer and locks the screen. If a Normal session is running, it stops and the strict session begins. If you do not have enough points at that moment, auto-start is switched off for that schedule.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="session">
+      <h2 class="group-title">During a strict session</h2>
+
+      <details class="acc">
+        <summary>Which apps can I use?</summary>
+        <div class="acc-body">
+          <ul>
+            <li><strong>Study apps:</strong> open during focus time and during breaks.</li>
+            <li><strong>Break apps:</strong> open only during a break.</li>
+            <li><strong>Phone and Messages</strong> always work.</li>
+            <li>2 study apps and 2 break apps are included free. Each extra app costs 3 points, shown before you confirm.</li>
+            <li>Your phone&rsquo;s home screen stays closed during focus time and opens during a break.</li>
+            <li>Your phone&rsquo;s Settings stay closed until the session ends.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>What happens if I leave the session?</summary>
+        <div class="acc-body">
+          <p>Studic brings your timer back. If <strong>Settings &rarr; Auto-lock during focus</strong> is on, it also locks your screen, so when you unlock you are right back in your session.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>How do breaks work?</summary>
+        <div class="acc-body">
+          <p>Longer sessions allow more breaks:</p>
+          <dl class="rows">
+            <div><dt>Up to 2 hours</dt><dd>No breaks</dd></div>
+            <div><dt>Over 2 up to 3 hours</dt><dd>1 break</dd></div>
+            <div><dt>Over 3 up to 4 hours</dt><dd>2 breaks</dd></div>
+            <div><dt>Over 4 up to 6 hours</dt><dd>3 breaks</dd></div>
+            <div><dt>Over 6 up to 8 hours</dt><dd>5 breaks</dd></div>
+            <div><dt>Over 8 up to 12 hours</dt><dd>6 breaks</dd></div>
+          </dl>
+          <ul>
+            <li>Each break lasts 15 minutes and costs 3 points when it starts.</li>
+            <li>After a break there is a 5-minute wait before the next one.</li>
+            <li><strong>Resume Focus</strong> ends a break early. The points are not returned.</li>
+            <li>Your timer shows how many breaks you have left.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Can I stop a Deep or Scheduled session early?</summary>
+        <div class="acc-body">
+          <p>No, and that is the point. There is no End button, so choose a length you can finish. Phone and Messages still work if you need to reach someone. If you are new, start with 15 or 30 minutes.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>What if my phone restarts during a session?</summary>
+        <div class="acc-body">
+          <p>Studic shows a short screen, brings your session back and may add some extra time to what is left. If a Scheduled session was already running when the phone started, it carries on without extra time.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="points">
+      <h2 class="group-title">Points &amp; Pro</h2>
+
+      <details class="acc">
+        <summary>What do points pay for?</summary>
+        <div class="acc-body">
+          <dl class="rows">
+            <div><dt>Start a Deep session</dt><dd>5 points</dd></div>
+            <div><dt>Start a Scheduled session</dt><dd>5 points</dd></div>
+            <div><dt>Each extra study or break app</dt><dd>3 points (2 of each are free)</dd></div>
+            <div><dt>Each break</dt><dd>3 points</dd></div>
+            <div><dt>Normal mode</dt><dd>Free</dd></div>
+          </dl>
+          <p>Points are used when a session starts or a break begins. Finishing a session does not earn points.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>How do I get points?</summary>
+        <div class="acc-body">
+          <ul>
+            <li><strong>Daily top-up:</strong> at midnight, if you have 12 points or fewer, Studic tops you back up to 12.</li>
+            <li><strong>Share:</strong> share Studic and get +15 points a few seconds later. A limited-time offer may give more. The Share Studic screen always shows the current amount.</li>
+            <li><strong>Watch an ad:</strong> +15 points when the ad finishes (needs internet).</li>
+            <li><strong>Buy a pack</strong> in the store.</li>
+          </ul>
+          <p>You can find these from the points button at the top of the screen or from the side menu.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>What points packs are there?</summary>
+        <div class="acc-body">
+          <dl class="rows">
+            <div><dt>Starter</dt><dd>450 points &middot; US$1.99</dd></div>
+            <div><dt>Popular</dt><dd>950 points &middot; US$2.99</dd></div>
+            <div><dt>Ultimate</dt><dd>2,100 points &middot; US$3.99</dd></div>
+          </dl>
+          <p>Google Play shows the price for your country when you buy. Packs are one-time purchases, not subscriptions, and your points do not expire.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>What is Pro?</summary>
+        <div class="acc-body">
+          <ul class="checks">
+            <li>Buying any points pack makes you a Pro user.</li>
+            <li>No ads while you are Pro.</li>
+            <li>No free midnight top-up. You keep the points you have.</li>
+            <li>Session prices stay the same.</li>
+          </ul>
+          <p>Pro stays active while you have 12 or more points. If you drop below 12, Pro pauses until you buy a pack or earn your points back up.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>My purchase did not arrive</summary>
+        <div class="acc-body">
+          <ol class="steps">
+            <li>Connect to the internet.</li>
+            <li>Open <strong>Settings &rarr; Purchase History</strong>.</li>
+            <li>Tap <strong>Restore purchases</strong>. Studic checks Google Play for any pack you paid for but did not receive.</li>
+          </ol>
+          <p>Still missing? Email us with your Google Play order number.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>&ldquo;Not enough points&rdquo;</summary>
+        <div class="acc-body">
+          <p>Points saved for your auto-start schedules can&rsquo;t be spent elsewhere. The message shows what you have, what is saved and what you need. Earn or buy more points, or choose fewer extra apps.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="permissions">
+      <h2 class="group-title">One-time setup</h2>
+
+      <details class="acc">
+        <summary>What is the setup for Deep and Scheduled?</summary>
+        <div class="acc-body">
+          <p>A short guide the first time you use Deep or Scheduled. It helps you turn on:</p>
+          <ol class="steps">
+            <li><strong>Usage access</strong>: so Studic knows which app is on screen.</li>
+            <li><strong>Device admin</strong>: so Studic can lock the screen when you leave.</li>
+            <li><strong>Display over other apps</strong>: so Studic can bring you back to your session.</li>
+            <li><strong>Background running</strong>: so your phone does not stop Studic.</li>
+            <li><strong>Auto-start</strong>: only on phones that have this extra switch.</li>
+          </ol>
+          <p>You can check them any time in <strong>Settings &rarr; Permissions Manager</strong>.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Is my information safe?</summary>
+        <div class="acc-body">
+          <p>Yes. During a strict session Studic only checks the name of the app on screen. It never reads your messages, passwords or anything you type, and nothing is sent away. Read more in our <a href="../privacy/#permissions">Privacy Policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Can I turn a permission off?</summary>
+        <div class="acc-body">
+          <p>Yes, in your phone&rsquo;s Settings. Deep and Scheduled will stop working until you turn it back on. Normal mode only needs notifications.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Notifications are off</summary>
+        <div class="acc-body">
+          <p>Allow notifications for Studic in your phone&rsquo;s Settings so you can see your timer, break status and reminders. If they stay off, you will miss reminders, but scheduled sessions can still start.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="backup">
+      <h2 class="group-title">Backup &amp; data</h2>
+
+      <details class="acc">
+        <summary>How do I back up or move to a new phone?</summary>
+        <div class="acc-body">
+          <p>Open <strong>Settings &rarr; Backup &amp; data</strong>.</p>
+          <ul>
+            <li><strong>Export Backup</strong> saves a backup file (settings, schedules, history and purchase records) wherever you choose.</li>
+            <li><strong>Import backup</strong> restores from that file. Your settings and schedules are replaced, and your history is added to.</li>
+          </ul>
+          <p>If your phone&rsquo;s own backup is on, it may also bring your data back on a new phone.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Will importing give me back points I used?</summary>
+        <div class="acc-body">
+          <p>No. Your points total is not copied from the file, and points you already used stay used. A pack you bought is added only if that phone has not saved the purchase yet.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Import is blocked</summary>
+        <div class="acc-body">
+          <p>You can&rsquo;t import or restore while a focus session is running, so finish the session first. Files that are damaged, changed, empty, too large or made by a newer version of Studic can&rsquo;t be used.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>How do I delete my data?</summary>
+        <div class="acc-body">
+          <p>Everything is on your phone. Use <strong>Settings &rarr; Uninstall Studic</strong>, or clear Studic&rsquo;s storage in your phone&rsquo;s app settings.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="fix">
+      <h2 class="group-title">Fixes</h2>
+
+      <details class="acc">
+        <summary>My session stopped or apps were not blocked</summary>
+        <div class="acc-body">
+          <p>Some phones close apps in the background to save battery. Check <strong>Settings &rarr; Permissions Manager</strong>, then:</p>
+          <ul>
+            <li>Let Studic run in the background (no battery restriction).</li>
+            <li>Turn on <strong>Auto-start</strong> for Studic if your phone has it (common on Xiaomi, Oppo, Vivo, Huawei and Samsung). The setup screen shows steps for your phone.</li>
+            <li>Make sure Usage access, Device admin and Display over other apps are on.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>A schedule did not start</summary>
+        <div class="acc-body">
+          <ul>
+            <li>The one-time setup must be finished.</li>
+            <li><strong>Auto-start</strong> must be on for that schedule.</li>
+            <li>You need enough free points when it starts.</li>
+            <li>Check background running and auto-start (above), and that your phone was switched on.</li>
+            <li>Allow alarms and reminders for Studic if your phone asks.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>&ldquo;No ad available&rdquo; or &ldquo;You&rsquo;re offline&rdquo;</summary>
+        <div class="acc-body">
+          <p>Turn on Wi-Fi or mobile data and try again. Sometimes no ad is ready, so try again a little later. You can review your ad choice any time with <strong>Ad privacy settings</strong> on the Watch ad screen.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>How do I remove Studic?</summary>
+        <div class="acc-body">
+          <p>Use <strong>Settings &rarr; Uninstall Studic</strong>. You can also uninstall it from your phone&rsquo;s Settings once no strict session is running.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>Still need help?</h2>
+      <p>Email us at <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>. Tell us your phone model and what happened. Please do not send passwords or payment details.</p>
+    </section>
+
+    <section aria-label="More pages">
+      <div class="linklist">
+        <a href="../privacy/"><div>Privacy Policy<span>How we treat your information</span></div></a>
+        <a href="../terms/"><div>Terms of Service<span>Simple rules for using Studic</span></div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand"><img src="../assets/img/studic-mark.png" width="24" height="24" alt="" aria-hidden="true">&copy; 2026 AmirSoftEng. Studic is built for Android.</span>
+      <div class="footer-links">
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../help/">Help Center</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

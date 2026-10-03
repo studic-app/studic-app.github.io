@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Studic — Study Deeply. Stay Focused.</title>
+  <meta name="description" content="Studic is a focus app for students. Use a simple timer, or a strict mode that keeps distracting apps closed until your study time is over.">
+  <meta name="theme-color" content="#ffb076">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Studic home"><img class="brand-logo brand-logo-light" src="assets/img/studic-wordmark.png" width="130" height="40" alt="Studic"><img class="brand-logo brand-logo-dark" src="assets/img/studic-wordmark-dark.png" width="130" height="40" alt="" aria-hidden="true"></a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#modes">Modes</a>
+        <a href="#faq">FAQ</a>
+        <a href="help/">Help Center</a>
+        <a href="privacy/">Privacy Policy</a>
+        <a href="terms/">Terms of Service</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <a class="btn btn-primary header-cta" href="https://play.google.com/store/apps/details?id=com.amirsofteng.studic" rel="noopener" target="_blank">Get Studic</a>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="chip"><span class="chip-dot"></span>A focus app for students</span>
+          <h1>Turn your phone into a <span class="gradient-text">study device</span></h1>
+          <p class="lead">Studic lets you choose how you focus: a light timer when you just need a nudge, or a strict lock that keeps distracting apps closed until the session ends.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.amirsofteng.studic" rel="noopener" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11.3 11.3 2.4 2.4-11 6.3 8.6-8.7Zm3.5-3.5 2.9 1.7c.8.5.8 1.8 0 2.3l-2.9 1.7-2.6-2.6 2.6-3.1ZM6.3 2.2l11 6.3-2.4 2.4-8.6-8.7Z"/></svg>
+              <span class="btn-stack"><small>GET IT ON</small>Google Play</span>
+            </a>
+            <a class="btn btn-outline" href="#modes">See how it works</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>3</strong><span>Focus modes</span></div>
+            <div class="stat"><strong>12h</strong><span>Max session</span></div>
+            <div class="stat"><strong>0</strong><span>Accounts needed</span></div>
+          </div>
+        </div>
+
+        <div aria-hidden="true">
+          <div class="phone">
+            <div class="phone-screen">
+              <span class="phone-mode">Deep mode</span>
+              <div class="ring">
+                <div class="ring-inner">
+                  <strong>42:18</strong>
+                  <span>Remaining</span>
+                </div>
+              </div>
+              <div class="phone-chips"><span>2 study apps</span><span>Breaks left: 1/2</span></div>
+              <span class="phone-note">Session ends at 10:30 pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block-alt" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Features</span>
+          <h2>Everything you need to <span class="gradient-text">stay focused</span></h2>
+          <p>Studic is built for students who want fewer distractions without giving up the apps they actually study with.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="feature-icon">&#9201;</div>
+            <h3>Three ways to focus</h3>
+            <p>Normal for a free timer, Deep for a strict lock, Scheduled for sessions that start on their own.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#128274;</div>
+            <h3>Stay on track</h3>
+            <p>In Deep mode, if you leave your session Studic brings your timer back and locks the screen, so it is harder to slip away.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#128218;</div>
+            <h3>Study and break apps</h3>
+            <p>Pick the apps you need for studying and the ones you allow on breaks. Phone and Messages always work. Everything else stays blocked.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#9749;</div>
+            <h3>Controlled breaks</h3>
+            <p>Sessions over 2 hours allow 15-minute breaks, with a 5-minute cooldown before the next one.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#128197;</div>
+            <h3>Scheduled sessions</h3>
+            <p>Set daily study windows. Studic reminds you 5 minutes before and starts the session when the window opens.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">&#128202;</div>
+            <h3>Session history</h3>
+            <p>See your focused time for today, this week, a month or all time, with a full timeline of your sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="modes">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Modes</span>
+          <h2>Choose how strict you want to be</h2>
+          <p>Start light. Go deep when exams are close.</p>
+        </div>
+        <div class="mode-grid">
+          <div class="mode">
+            <h3>Normal</h3>
+            <p class="tagline">A focus timer you can stop any time.</p>
+            <ul>
+              <li>Session timer and notification</li>
+              <li>Stop whenever you like</li>
+              <li>Free, uses no points</li>
+              <li class="no">No app blocking</li>
+            </ul>
+          </div>
+          <div class="mode mode-featured">
+            <span class="mode-badge">Most focused</span>
+            <h3>Deep</h3>
+            <p class="tagline">Your phone becomes a study device until time is up.</p>
+            <ul>
+              <li>Only your study apps work, plus Phone and Messages</li>
+              <li>Leaving the session brings your timer back</li>
+              <li>2 study apps and 2 break apps included</li>
+              <li>No early exit, from 15 minutes to 12 hours</li>
+            </ul>
+          </div>
+          <div class="mode">
+            <h3>Scheduled</h3>
+            <p class="tagline">Deep focus that starts on its own.</p>
+            <ul>
+              <li>Daily study windows</li>
+              <li>Reminder 5 minutes before</li>
+              <li>Same protection as Deep</li>
+              <li>Overlapping windows can&rsquo;t be saved</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block-alt" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>From distracted to focused in three steps</h2>
+        </div>
+        <div class="step-grid">
+          <div class="step">
+            <h3>Pick a mode</h3>
+            <p>Tap Start Focus on Home, then choose Normal, Deep or Scheduled.</p>
+          </div>
+          <div class="step">
+            <h3>Set time and apps</h3>
+            <p>Choose a duration from 15 minutes up to 12 hours and pick your study and break apps.</p>
+          </div>
+          <div class="step">
+            <h3>Focus until done</h3>
+            <p>Studic keeps distractions closed. Take a break when your session allows one, then get back to work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions, answered</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Does Studic need an account or internet?</summary>
+            <p>No account is needed, and Studic works without internet. Your sessions, schedules and history stay on your phone. You only need to be online to watch an ad or buy points.</p>
+          </details>
+          <details>
+            <summary>Can I still use apps I need for studying?</summary>
+            <p>Yes. In Deep and Scheduled modes you choose study apps for focus time and break apps for breaks. Phone and Messages always stay available.</p>
+          </details>
+          <details>
+            <summary>Can I stop a Deep session early?</summary>
+            <p>Deep and Scheduled sessions are strict on purpose, so there is no End button. If you want to be able to stop any time, use Normal mode.</p>
+          </details>
+          <details>
+            <summary>How long can a session be?</summary>
+            <p>From 15 minutes up to 12 hours. Sessions longer than 2 hours allow breaks, and longer sessions allow more of them.</p>
+          </details>
+          <details>
+            <summary>How do points work?</summary>
+            <p>Normal mode is free. Deep and Scheduled use points. You get a free daily top-up, and you can earn more by sharing Studic or watching an ad, or buy a points pack. Buying any pack makes you a Pro user and removes ads.</p>
+          </details>
+          <details>
+            <summary>Why does Studic ask for extra permissions?</summary>
+            <p>Normal mode needs almost nothing. Deep and Scheduled need a few extra permissions so Studic can keep other apps closed and lock your screen if you try to leave. Studic only asks when you set up those modes. <a href="privacy/#permissions">See what each one does</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="container cta-wrap">
+      <div class="cta">
+        <h2>Start your focused journey today</h2>
+        <p>Download Studic, block distractions during study time, and build habits that stick.</p>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.amirsofteng.studic" rel="noopener" target="_blank">Download Studic</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand"><img src="assets/img/studic-mark.png" width="24" height="24" alt="" aria-hidden="true">&copy; 2026 AmirSoftEng. Studic is built for Android.</span>
+      <div class="footer-links">
+        <a href="privacy/">Privacy Policy</a>
+        <a href="terms/">Terms of Service</a>
+        <a href="help/">Help Center</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
