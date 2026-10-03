@@ -35,9 +35,9 @@ Optional: `?theme=light` or `?theme=dark` makes the page match the app theme. Wi
 Examples:
 
 ```
-https://amirsofteng.github.io/privacy/?embed=1&theme=light
-https://amirsofteng.github.io/terms/?embed=1&theme=dark
-https://amirsofteng.github.io/help/?embed=1
+https://studic-app.github.io/privacy/?embed=1&theme=light
+https://studic-app.github.io/terms/?embed=1&theme=dark
+https://studic-app.github.io/help/?embed=1
 ```
 
 Section links work too, for example `/help/?embed=1#points` opens the Points section.
@@ -55,12 +55,16 @@ Open <http://localhost:8000/> (or `/privacy/?embed=1&theme=light`). In the brows
 
 | Placeholder | Where | Replace with |
 |:---|:---|:---|
-| `YOUR_EMAIL@example.com` | `privacy/`, `terms/`, `help/` (search the folder) | your real support email |
-| `amirsofteng.github.io` | `robots.txt`, `sitemap.xml` | your real Pages host, if different |
+| `software.engineer.amir@gmail.com` | `privacy/`, `terms/`, `help/` | the support email, if you change it |
+| `studic-app.github.io` | `robots.txt`, `sitemap.xml`, the app's `StudicWebLinks.BASE_URL` | the site address, if you move it |
 | `<base href="/">` | `404.html` | `/` for a `<user>.github.io` repo or custom domain; `/<repo-name>/` for a project repo |
 | `Last updated` dates | the three pages | the day you change the text |
 
 ## Deploy on GitHub Pages
+
+Live site: <https://studic-app.github.io/> (organization `studic-app`, repository `studic-app.github.io`, branch `main`, folder `/`). To publish a change, commit and push from this folder; GitHub updates the site within a minute or two. The app reads the site address from `StudicWebLinks.BASE_URL`.
+
+The steps below are for setting up a new site (for example for another app):
 
 Option A, user site (URL: `https://<user>.github.io/`):
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amirsofteng.github.io/sitemap.xml
+Sitemap: https://studic-app.github.io/sitemap.xml
