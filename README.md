@@ -10,8 +10,8 @@ It has two looks from the same files:
 | URL | File | Purpose |
 |:---|:---|:---|
 | `/` | `index.html` | Landing page (features, modes, how it works, FAQ) |
-| `/privacy/` | `privacy/index.html` | Privacy Policy (use this URL in the Play Console Data safety form) |
-| `/permissions/` | `permissions/index.html` | Every Android permission, purpose, and what Studic never does (use this URL in Play permission declarations) |
+| `/privacy/` | `privacy/index.html` | Privacy Policy |
+| `/permissions/` | `permissions/index.html` | Every Android permission, purpose, and what Studic never does, and how to turn each off |
 | `/terms/` | `terms/index.html` | Terms of Service |
 | `/help/` | `help/index.html` | Help Center |
 | any missing page | `404.html` | Page not found |

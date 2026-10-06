@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Permissions — Studic</title>
-  <meta name="description" content="Every Android permission Studic uses, why it is needed, what it never does, and how you turn it off. Written for users and Google Play review.">
+  <meta name="description" content="Every Android permission Studic uses, why it is needed, what it never does, and how you turn it off. Plain-language, no hidden access.">
   <meta name="theme-color" content="#ffb076">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/icon-192.png">
@@ -57,7 +57,7 @@
     <p class="meta embed-only">Last updated: 7 October 2026</p>
 
     <section class="card summary" id="summary">
-      <h2>For users and Google Play review</h2>
+      <h2>The short version</h2>
       <p>Studic is a <strong>user-initiated focus timer</strong>. You choose Normal, Deep or Scheduled, you choose how long, and you can uninstall at any time when a session is not running. Permissions exist only so those modes can work as you asked.</p>
       <ul class="checks">
         <li><strong>Normal mode</strong> needs notifications only. It does not block apps and does not lock the phone.</li>
@@ -87,13 +87,13 @@
         <li><a href="#network">Internet (ads and Play purchases only)</a></li>
         <li><a href="#oem">Phone-maker auto-start</a></li>
         <li><a href="#turn-off">How to turn permissions off</a></li>
-        <li><a href="#play">Notes for Google Play review</a></li>
+        <li><a href="#glance">Permissions at a glance</a></li>
       </ol>
     </details>
 
     <section class="card" id="never">
       <h2>What Studic never uses</h2>
-      <p>These are listed so a Play reviewer can match the APK. Studic does <strong>not</strong> include or request:</p>
+      <p>For your peace of mind, here is what Studic does <strong>not</strong> do or ask for:</p>
       <ul class="crosses">
         <li>Accessibility Service (no <code>BIND_ACCESSIBILITY_SERVICE</code>)</li>
         <li>Device Owner, work profile, kiosk mode, or enterprise MDM</li>
@@ -251,7 +251,7 @@
       <h2>Foreground service (special use)</h2>
       <div class="badge-row"><span class="badge">While a session or recovery is active</span></div>
       <p class="perm-id">Android: <code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></p>
-      <p>Keeps the session timer and protection running while you focus, and runs the short boot-recovery screen if needed. Android requires a visible foreground service for this kind of work. The user-visible reason is: <em>strict focus session protection and reboot recovery</em>. This is not a hidden tracker.</p>
+      <p>Keeps the session timer and protection running while you focus, and runs the short boot-recovery screen if needed. Android requires a visible foreground service for this kind of work. You will see Studic&rsquo;s notification while it runs. Its purpose is <em>focus session protection and recovery after a restart</em>. It stops when the session ends, and it is not a hidden tracker.</p>
     </article>
 
     <article class="card perm" id="wake">
@@ -292,36 +292,36 @@
       </ol>
     </section>
 
-    <section class="card" id="play">
-      <h2>Notes for Google Play review</h2>
-      <p>Package: <code>com.amirsofteng.studic</code>. Category: productivity / focus (digital wellbeing). All sensitive access is tied to a session the user starts, or to an optional switch the user turns on.</p>
+    <section class="card" id="glance">
+      <h2>Permissions at a glance</h2>
+      <p>Everything sensitive is tied to a session you start, or to a switch you turn on yourself.</p>
       <dl class="rows">
         <div>
           <dt>Device admin</dt>
-          <dd>FORCE_LOCK / <code>lockNow</code> only, during a user-started Deep or Scheduled session, and only if Auto-lock is enabled. Not Device Owner. Not wipe. Not password. Not anti-uninstall.</dd>
+          <dd>Locks the screen when you leave a Deep or Scheduled session, only if Auto-lock is on. It cannot erase your phone, change your password or read your private information.</dd>
         </div>
         <div>
           <dt>Usage access</dt>
-          <dd>Foreground app during that session so allowed study apps stay available. Also powers an on-device Home usage chart after grant. No off-device app-graph.</dd>
+          <dd>Lets Studic see which app is in front during a session, so your study apps stay available and distractions are sent back to the timer. It also draws the usage chart on your Home screen, on your phone only.</dd>
         </div>
         <div>
           <dt>Display over other apps</dt>
-          <dd>Short reboot-recovery UI if a strict session was already running. Not a daily overlay. Not ads.</dd>
+          <dd>Only for the short recovery screen if your phone restarts in the middle of a Deep or Scheduled session.</dd>
         </div>
         <div>
           <dt>Notification access</dt>
-          <dd>Optional. Off until the user enables Hide system notifications. Dismisses other apps&rsquo; shade posts only while a session runs. Does not upload notification content.</dd>
+          <dd>Optional and off by default. If you turn on Hide system notifications, Studic clears other apps&rsquo; notifications while a session runs. It does not copy or upload them.</dd>
         </div>
         <div>
-          <dt>Foreground service (special use)</dt>
-          <dd>Visible session protection and reboot recovery, declared in the manifest property.</dd>
+          <dt>Foreground service</dt>
+          <dd>Keeps your running session alive and shows a visible notification while it does.</dd>
         </div>
         <div>
           <dt>Accessibility</dt>
-          <dd>Not in the app. Not used as a fallback for blocking.</dd>
+          <dd>Not used. Studic never asks for it.</dd>
         </div>
       </dl>
-      <p>Privacy Policy: <a href="../privacy/">https://studic-app.github.io/privacy/</a>. This permissions page: <a href="./">https://studic-app.github.io/permissions/</a>.</p>
+      <p>Questions about data? Read the <a href="../privacy/">Privacy Policy</a>. Need setup help? Open the <a href="../help/">Help Center</a>.</p>
     </section>
 
     <section aria-label="More pages">
