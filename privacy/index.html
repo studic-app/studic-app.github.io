@@ -22,6 +22,7 @@
         <a href="../#features">Features</a>
         <a href="../#modes">Modes</a>
         <a href="../help/">Help Center</a>
+        <a href="../permissions/">Permissions</a>
         <a href="../privacy/" aria-current="page">Privacy Policy</a>
         <a href="../terms/">Terms of Service</a>
       </nav>
@@ -42,9 +43,10 @@
     <div class="container">
       <span class="eyebrow">Studic</span>
       <h1>Privacy <span class="gradient-text">Policy</span></h1>
-      <p class="meta">Last updated: 3 October 2026</p>
+      <p class="meta">Last updated: 7 October 2026</p>
       <nav class="doc-tabs" aria-label="Pages">
         <a href="./" aria-current="page">Privacy Policy</a>
+        <a href="../permissions/">Permissions</a>
         <a href="../terms/">Terms of Service</a>
         <a href="../help/">Help Center</a>
       </nav>
@@ -52,7 +54,7 @@
   </section>
 
   <main class="page" id="main">
-    <p class="meta embed-only">Last updated: 3 October 2026</p>
+    <p class="meta embed-only">Last updated: 7 October 2026</p>
 
     <section class="card summary" id="summary">
       <h2>The short version</h2>
@@ -69,7 +71,7 @@
       <ol>
         <li><a href="#who">Who we are</a></li>
         <li><a href="#stored">What Studic saves on your phone</a></li>
-        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#permissions">Permissions (summary)</a></li>
         <li><a href="#ads">Ads</a></li>
         <li><a href="#purchases">Purchases</a></li>
         <li><a href="#sharing">Sharing Studic</a></li>
@@ -108,47 +110,56 @@
         </div>
         <div>
           <dt>Your settings and apps</dt>
-          <dd>Your theme and the apps you picked as study apps and break apps.</dd>
+          <dd>Your theme, Auto-lock during focus, notification switches, and the apps you picked as study apps and break apps.</dd>
         </div>
         <div>
           <dt>Your running session</dt>
           <dd>The timer and break details of a session in progress, so Studic can pick it back up if your phone restarts.</dd>
         </div>
+        <div>
+          <dt>When you last opened Studic</dt>
+          <dd>Used only on the phone to time a quiet focus reminder. Opening the app resets that quiet streak.</dd>
+        </div>
       </dl>
-      <div class="callout info">Studic does <strong>not</strong> keep a list of the apps you open. During a Deep or Scheduled session it only counts how many times you left the session.</div>
+      <div class="callout info">Studic does <strong>not</strong> keep a cloud list of the apps you open. During a Deep or Scheduled session it checks the name of the app on screen so allowed study apps stay available. If Usage access is granted, Home can also show an on-device app-usage chart; those totals are not uploaded.</div>
     </section>
 
     <section class="card" id="permissions">
       <h2>Permissions</h2>
-      <p>Normal mode only needs notifications. The permissions below are for Deep and Scheduled sessions, and Studic asks for them in a short, one-time setup. You can turn any of them off later in your phone&rsquo;s Settings.</p>
+      <p>The full list, including Android permission names, what Studic never does, and how you turn each one off, is on the <a href="../permissions/">Permissions</a> page. That page is the one to send in a Play review if a reviewer asks why a permission is in the APK.</p>
+      <p>Normal mode only needs notifications. Deep and Scheduled ask for extra permissions in a short, one-time setup. You can turn any of them off later in Android Settings or in Studic (<strong>Settings &rarr; Permissions Manager</strong> and <strong>Notifications Manager</strong>).</p>
       <dl class="rows">
         <div>
           <dt>Notifications</dt>
-          <dd>Show your timer, break status and schedule notices.</dd>
+          <dd>Session timer, schedule-skipped notice, and an occasional focus reminder. You can switch channels off in Notifications Manager. Studic does not send sales alerts.</dd>
         </div>
         <div>
           <dt>Usage access</dt>
-          <dd>Lets Studic know which app is on screen during a Deep or Scheduled session, so your study apps stay open and other apps stay closed. Studic only checks the app&rsquo;s name. It does not look inside the app, and nothing is stored or sent anywhere.</dd>
+          <dd>Lets Studic know which app is on screen during a Deep or Scheduled session you started, so your study apps stay open and other apps stay closed. It only uses the app&rsquo;s name. Nothing is sent to a Studic server. After you grant this, Home can also show an on-device app-usage chart.</dd>
         </div>
         <div>
           <dt>Device admin</dt>
-          <dd>Used only to lock your screen when you leave a Deep or Scheduled session. Studic cannot read your private information, erase your phone or change your password.</dd>
+          <dd>Used only to lock your screen when you leave a Deep or Scheduled session. Studic cannot read your private information, erase your phone or change your password. Locking happens only if <strong>Settings &rarr; Auto-lock during focus</strong> is on (it is on by default; you can turn it off). The only admin policy is lock-screen. Uninstall remains possible.</dd>
         </div>
         <div>
           <dt>Display over other apps</dt>
-          <dd>Lets Studic show its own screen to bring you back to your session if your phone restarts. It never shows anything from other apps.</dd>
+          <dd>A short recovery screen if the phone restarts during a Deep or Scheduled session. Not a daily overlay and never used for ads.</dd>
         </div>
         <div>
           <dt>Background running</dt>
-          <dd>Keeps Studic running so your session is not stopped by your phone, and starts scheduled sessions on time.</dd>
+          <dd>Keeps a session you started from being stopped by battery savers, and helps schedules start on time.</dd>
+        </div>
+        <div>
+          <dt>Notification access (optional)</dt>
+          <dd>Off until you turn on Hide system notifications. During a session, other apps&rsquo; shade notifications can be dismissed. Notification text is not read for ads and is not uploaded. Study apps, alarms and calls are left alone.</dd>
         </div>
       </dl>
-      <div class="callout warn">During a Deep or Scheduled session, Studic keeps your phone&rsquo;s Settings closed so the session cannot be switched off by accident. You get full control back as soon as the session ends.</div>
+      <div class="callout warn">Studic does not use Accessibility, Device Owner, kiosk mode or screen pinning. During a Deep or Scheduled session, Android Settings may stay closed so the session cannot be switched off by accident. You get full control back when the session ends, and you can uninstall from Settings &rarr; Uninstall Studic.</div>
     </section>
 
     <section class="card" id="ads">
       <h2>Ads</h2>
-      <p>Studic shows an ad <strong>only when you tap &ldquo;Watch ad&rdquo;</strong> to earn points. There are no ads during your focus sessions, and Pro users do not see ads.</p>
+      <p>Studic shows an ad <strong>only when you tap Watch ad</strong> to earn points. There are no ads during a running session. Pro users do not see ads. There is a daily cap (5 successful ads) and a short wait between paid ads.</p>
       <p>Ads are provided by Google. To show an ad, Google may use information about your device and how you interact with the ad. That information goes to Google, not to us.</p>
       <ul>
         <li>Where the law requires it, Studic asks for your choice first. You can review it any time from <strong>Ad privacy settings</strong> on the Watch ad screen.</li>
@@ -166,7 +177,7 @@
 
     <section class="card" id="sharing">
       <h2>Sharing Studic</h2>
-      <p>When you tap Share, your phone&rsquo;s normal share menu opens with a short message and the Play Store link. You choose the app and the person. Studic does not know who you shared with. A few seconds later, your reward points are added.</p>
+      <p>When you tap Share, your phone&rsquo;s normal share menu opens with a short message and the Play Store link. You choose the app and the person. Studic does not know who you shared with and <strong>does not add points for sharing</strong>.</p>
     </section>
 
     <section class="card" id="backups">
@@ -182,8 +193,9 @@
       <ul class="crosses">
         <li>Your name, email, phone number or any account details</li>
         <li>Your messages, emails or passwords</li>
-        <li>Anything you type or view inside other apps, or your browsing history</li>
-        <li>Your contacts, photos, camera, microphone or files</li>
+        <li>Anything you type or view inside other apps, or a cloud copy of your browsing history</li>
+        <li>The text of other apps&rsquo; notifications</li>
+        <li>Your contacts, photos, camera, microphone or files (except a backup file you choose to save or open)</li>
         <li>Your exact location</li>
       </ul>
       <p>We do not sell your personal information.</p>
@@ -224,6 +236,7 @@
     <section aria-label="More pages">
       <div class="linklist">
         <a href="../terms/"><div>Terms of Service<span>Simple rules for using Studic</span></div></a>
+        <a href="../permissions/"><div>Permissions<span>Why each Android permission exists</span></div></a>
         <a href="../help/"><div>Help Center<span>Answers to common questions</span></div></a>
       </div>
     </section>
@@ -234,6 +247,7 @@
       <span class="footer-brand"><img src="../assets/img/studic-mark.png" width="24" height="24" alt="" aria-hidden="true">&copy; 2026 AmirSoftEng. Studic is built for Android.</span>
       <div class="footer-links">
         <a href="../privacy/">Privacy Policy</a>
+        <a href="../permissions/">Permissions</a>
         <a href="../terms/">Terms of Service</a>
         <a href="../help/">Help Center</a>
       </div>

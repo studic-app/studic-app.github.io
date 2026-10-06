@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Permissions — Studic</title>
+  <meta name="description" content="Every Android permission Studic uses, why it is needed, what it never does, and how you turn it off. Written for users and Google Play review.">
+  <meta name="theme-color" content="#ffb076">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="Studic home"><img class="brand-logo brand-logo-light" src="../assets/img/studic-wordmark.png" width="130" height="40" alt="Studic"><img class="brand-logo brand-logo-dark" src="../assets/img/studic-wordmark-dark.png" width="130" height="40" alt="" aria-hidden="true"></a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../#features">Features</a>
+        <a href="../#modes">Modes</a>
+        <a href="../help/">Help Center</a>
+        <a href="../permissions/" aria-current="page">Permissions</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <a class="btn btn-primary header-cta" href="https://play.google.com/store/apps/details?id=com.amirsofteng.studic" rel="noopener" target="_blank">Get Studic</a>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="doc-hero">
+    <div class="container">
+      <span class="eyebrow">Studic</span>
+      <h1>App <span class="gradient-text">permissions</span></h1>
+      <p class="meta">Last updated: 7 October 2026</p>
+      <nav class="doc-tabs" aria-label="Pages">
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="./" aria-current="page">Permissions</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../help/">Help Center</a>
+      </nav>
+    </div>
+  </section>
+
+  <main class="page" id="main">
+    <p class="meta embed-only">Last updated: 7 October 2026</p>
+
+    <section class="card summary" id="summary">
+      <h2>For users and Google Play review</h2>
+      <p>Studic is a <strong>user-initiated focus timer</strong>. You choose Normal, Deep or Scheduled, you choose how long, and you can uninstall at any time when a session is not running. Permissions exist only so those modes can work as you asked.</p>
+      <ul class="checks">
+        <li><strong>Normal mode</strong> needs notifications only. It does not block apps and does not lock the phone.</li>
+        <li><strong>Deep and Scheduled</strong> need extra permissions, asked in a short one-time setup the first time you use those modes.</li>
+        <li><strong>Auto-lock during focus</strong> is a Settings switch (on by default). You can turn it off. When it is off, Studic still brings the timer back if you leave, but it does <strong>not</strong> lock the screen.</li>
+        <li><strong>Hide system notifications</strong> is off until you grant Notification access. It only runs during a session you started.</li>
+        <li>You can turn any permission off in Android Settings. Deep and Scheduled then pause until you turn it back on.</li>
+      </ul>
+    </section>
+
+    <details class="card toc">
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#never">What Studic never uses</a></li>
+        <li><a href="#lock">Screen lock (you control this)</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#usage">Usage access</a></li>
+        <li><a href="#admin">Device admin</a></li>
+        <li><a href="#overlay">Display over other apps</a></li>
+        <li><a href="#battery">Background / battery</a></li>
+        <li><a href="#listener">Notification access</a></li>
+        <li><a href="#alarms">Alarms and reminders</a></li>
+        <li><a href="#boot">Run at startup</a></li>
+        <li><a href="#fgs">Foreground service</a></li>
+        <li><a href="#wake">Keep the device awake (briefly)</a></li>
+        <li><a href="#keyguard">Know if the screen is locked</a></li>
+        <li><a href="#network">Internet (ads and Play purchases only)</a></li>
+        <li><a href="#oem">Phone-maker auto-start</a></li>
+        <li><a href="#turn-off">How to turn permissions off</a></li>
+        <li><a href="#play">Notes for Google Play review</a></li>
+      </ol>
+    </details>
+
+    <section class="card" id="never">
+      <h2>What Studic never uses</h2>
+      <p>These are listed so a Play reviewer can match the APK. Studic does <strong>not</strong> include or request:</p>
+      <ul class="crosses">
+        <li>Accessibility Service (no <code>BIND_ACCESSIBILITY_SERVICE</code>)</li>
+        <li>Device Owner, work profile, kiosk mode, or enterprise MDM</li>
+        <li>Screen pinning / <code>startLockTask()</code></li>
+        <li>Permission to wipe the phone, change the lock-screen password, factory reset, disable the camera, or watch installed apps as an admin</li>
+        <li>A permanent uninstall block. You uninstall from <strong>Settings &rarr; Uninstall Studic</strong> (turn Device admin off there first if Android asks)</li>
+        <li>Contacts, SMS, call logs, camera, microphone, precise location, or full storage access</li>
+        <li>Reading the body of other apps&rsquo; notifications to advertise or to send off the phone</li>
+        <li>A Studic account or Studic server. Session, points and settings stay on the device unless you export a backup file yourself</li>
+      </ul>
+    </section>
+
+    <section class="card" id="lock">
+      <h2>Screen lock &mdash; you control this</h2>
+      <p>During a Deep or Scheduled session you started, if you leave the timer or open an app that is not allowed, Studic brings the timer back to the front.</p>
+      <p>Separately, Studic can <strong>lock the phone</strong> at that moment, the same way the power button locks it. That uses Device admin&rsquo;s <strong>lock-screen only</strong> policy (see <a href="#admin">Device admin</a>).</p>
+      <ul>
+        <li>The switch is <strong>Settings &rarr; Auto-lock during focus</strong>.</li>
+        <li>It is <strong>on by default</strong> so a strict session is harder to walk away from.</li>
+        <li>You can <strong>turn it off</strong> any time. Studic then still returns you to the timer, but it will not lock the screen.</li>
+        <li>Normal mode never locks the phone.</li>
+        <li>Locking does not change your PIN, pattern or password. Unlocking works with the same lock you already set on the phone.</li>
+      </ul>
+      <div class="callout info">If Auto-lock is off, Device admin is still part of Deep/Scheduled setup because the lock feature is available when you turn the switch back on. You can also deactivate Device admin in Android Settings; Deep and Scheduled then cannot start until you enable it again.</div>
+    </section>
+
+    <article class="card perm" id="notifications">
+      <h2>Notifications</h2>
+      <div class="badge-row"><span class="badge">Asked at first launch</span></div>
+      <p class="perm-id">Android: <code>POST_NOTIFICATIONS</code></p>
+      <h4>Why Studic asks</h4>
+      <p>To show the remaining session time, a notice when a scheduled session cannot start, and an occasional quiet reminder if you have not focused for a few days.</p>
+      <h4>What it does</h4>
+      <ul class="checks">
+        <li>Session timer on the lock screen / shade while you focus (you can turn this channel off in <strong>Settings &rarr; Notifications Manager</strong>)</li>
+        <li>&ldquo;Schedule skipped&rdquo; if a window cannot start because of points</li>
+        <li>A history-based focus reminder (no Settings row; only after you have completed sessions)</li>
+      </ul>
+      <h4>What it never does</h4>
+      <ul class="crosses">
+        <li>Sales, promotions or spam</li>
+        <li>Notifications from other apps (that is a different, optional permission below)</li>
+      </ul>
+      <h4>If you turn it off</h4>
+      <p>Studic still works. You may miss the timer, skip notice and reminder. You can allow notifications again from Notifications Manager or Android Settings.</p>
+    </article>
+
+    <article class="card perm" id="usage">
+      <h2>Usage access</h2>
+      <div class="badge-row"><span class="badge">Deep &amp; Scheduled</span></div>
+      <p class="perm-id">Android: <code>PACKAGE_USAGE_STATS</code> (Usage access)</p>
+      <h4>User-facing purpose</h4>
+      <p>This is the core of strict focus: Studic needs to know <strong>which app is currently on screen</strong> so that, during a session <em>you started</em>, only your chosen study apps (plus Phone and Messages) stay available, and other apps are closed.</p>
+      <h4>What Studic uses</h4>
+      <ul class="checks">
+        <li>The foreground app&rsquo;s name / package during an active Deep or Scheduled session, so allowed apps stay and other apps do not</li>
+        <li>On Home, after you have granted Usage access, an on-device <strong>app usage</strong> chart (Today / This week / Last week). Totals are computed on the phone from Android usage events. Studic does not upload that chart</li>
+      </ul>
+      <h4>What Studic never does</h4>
+      <ul class="crosses">
+        <li>Read messages, emails, passwords, or anything you type or see inside another app</li>
+        <li>Record browsing history or a permanent log of every app you open for advertising</li>
+        <li>Send package names to a Studic server (there is none)</li>
+      </ul>
+      <p>Normal mode does not require Usage access. You can revoke it in Android Settings &rarr; Apps &rarr; Special app access &rarr; Usage access. Deep and Scheduled cannot run until it is granted again.</p>
+    </article>
+
+    <article class="card perm" id="admin">
+      <h2>Device admin</h2>
+      <div class="badge-row"><span class="badge">Deep &amp; Scheduled</span></div>
+      <p class="perm-id">Android: Device Administration API, policy <code>force-lock</code> only. Receiver: <code>BIND_DEVICE_ADMIN</code>. XML: <code>force-lock</code>. No wipe, password, or other admin policies.</p>
+      <div class="callout info">Used only to lock your screen when you leave a Deep or Scheduled session. Studic cannot read your private information, erase your phone or change your password.</div>
+      <h4>User-facing purpose</h4>
+      <p>When you start a Deep or Scheduled session and then leave the timer or open a blocked app, Studic can lock the screen (the same action as the power button) so that when you unlock, you are back on the timer. This only happens if <strong>Settings &rarr; Auto-lock during focus</strong> is on.</p>
+      <h4>What the admin policy is allowed to do</h4>
+      <ul class="checks">
+        <li>Call the system lock-screen API (<code>lockNow</code> / FORCE_LOCK) during a user-started Deep or Scheduled session, and only when Auto-lock is enabled</li>
+      </ul>
+      <h4>What it is not allowed to do (and the app does not request)</h4>
+      <ul class="crosses">
+        <li>Read your private information, files, messages or passwords</li>
+        <li>Erase the phone, factory reset, or wipe app data as an admin</li>
+        <li>Change, reset or see your PIN, pattern, password or biometrics</li>
+        <li>Disable the camera, watch which apps you install, or enroll the phone as Device Owner / work profile / kiosk</li>
+        <li>Prevent uninstall. You can deactivate Device admin and uninstall Studic from <strong>Settings &rarr; Uninstall Studic</strong> or from Android&rsquo;s app info screen when no strict session is running</li>
+      </ul>
+      <h4>User control</h4>
+      <ul>
+        <li>Turn <strong>Auto-lock during focus</strong> off: no screen lock; timer still returns to the front.</li>
+        <li>Deactivate Device admin in Android Settings: Deep and Scheduled cannot start until you enable it again. Normal mode is unchanged.</li>
+      </ul>
+      <p>Studic is not a device-management, parental-control or anti-theft product. Device admin is used only as a lock-screen helper for a study session the user started.</p>
+    </article>
+
+    <article class="card perm" id="overlay">
+      <h2>Display over other apps</h2>
+      <div class="badge-row"><span class="badge">Deep &amp; Scheduled</span></div>
+      <p class="perm-id">Android: <code>SYSTEM_ALERT_WINDOW</code></p>
+      <h4>User-facing purpose</h4>
+      <p>If the phone <strong>restarts while a Deep or Scheduled session is still running</strong>, Android may not allow a normal activity to appear on the lock screen. Studic then shows a short recovery screen (about 5 seconds) so you can continue the session you already started. This is not a daily blocking overlay and it is not shown in Normal mode.</p>
+      <h4>What it never does</h4>
+      <ul class="crosses">
+        <li>Draw ads, spam, or a permanent layer over other apps</li>
+        <li>Read or capture what other apps display</li>
+        <li>Replace Android Settings or hide the uninstall button</li>
+      </ul>
+      <p>You can revoke overlay in Android Settings. Strict sessions can still run until a reboot; recovery after restart needs this permission.</p>
+    </article>
+
+    <article class="card perm" id="battery">
+      <h2>Background / battery (ignore optimizations)</h2>
+      <div class="badge-row"><span class="badge">Deep &amp; Scheduled</span></div>
+      <p class="perm-id">Android: <code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></p>
+      <h4>User-facing purpose</h4>
+      <p>Many phones stop background apps to save battery. If that happens mid-session, the timer and app blocking can pause. Allowing Studic to run without those restrictions keeps a session you started running until it ends, and helps scheduled windows start on time.</p>
+      <h4>What it never does</h4>
+      <ul class="crosses">
+        <li>Run hidden work when you are not focusing or have no schedule</li>
+        <li>Collect or send personal data in the background</li>
+      </ul>
+    </article>
+
+    <article class="card perm" id="listener">
+      <h2>Notification access (hide other apps&rsquo; notifications)</h2>
+      <div class="badge-row"><span class="badge optional">Optional &mdash; off by default</span></div>
+      <p class="perm-id">Android: <code>BIND_NOTIFICATION_LISTENER_SERVICE</code>. Service used only to dismiss shade notifications, not to display a second notification inbox.</p>
+      <h4>User-facing purpose</h4>
+      <p>An optional focus aid, like putting the phone on a quiet mode for other apps. In <strong>Settings &rarr; Notifications Manager</strong>, you can turn on <strong>Hide system notifications</strong>. Android then opens the Notification access list. You choose Studic and allow access.</p>
+      <p>Only while a session is running, Studic dismisses other apps&rsquo; status-bar / shade notifications so chats and mail are less likely to pull you away. Study apps (and break apps during a break) are left alone. Studic&rsquo;s own posts stay. Ongoing, alarm and call notifications are not dismissed.</p>
+      <h4>What it never does</h4>
+      <ul class="crosses">
+        <li>Read notification text or titles for advertising, analytics or training</li>
+        <li>Send notification contents off the device</li>
+        <li>Run when no session is active, or after you turn the switch off</li>
+        <li>Replace Android&rsquo;s notification shade or act as a notification backup product</li>
+      </ul>
+      <p>Revoke Notification access in Android Settings, or turn the switch off in Notifications Manager. Normal, Deep and Scheduled still work without it.</p>
+    </article>
+
+    <article class="card perm" id="alarms">
+      <h2>Alarms and reminders</h2>
+      <div class="badge-row"><span class="badge">Scheduled mode</span></div>
+      <p class="perm-id">Android: <code>SCHEDULE_EXACT_ALARM</code></p>
+      <p>Lets a study window you created start at the time you set, and lets a quiet focus reminder fire at your usual start hour. Not used for ads. If Android asks you to allow alarms and reminders for Studic, that is this permission.</p>
+    </article>
+
+    <article class="card perm" id="boot">
+      <h2>Run at startup</h2>
+      <div class="badge-row"><span class="badge">Deep &amp; Scheduled recovery</span></div>
+      <p class="perm-id">Android: <code>RECEIVE_BOOT_COMPLETED</code> (including locked-boot)</p>
+      <p>If the phone restarts during a Deep or Scheduled session that was already running, Studic can restart its protection and show the short recovery screen. It does not start a new session from a reboot by itself. Normal mode does not use this for a lock overlay.</p>
+    </article>
+
+    <article class="card perm" id="fgs">
+      <h2>Foreground service (special use)</h2>
+      <div class="badge-row"><span class="badge">While a session or recovery is active</span></div>
+      <p class="perm-id">Android: <code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></p>
+      <p>Keeps the session timer and protection running while you focus, and runs the short boot-recovery screen if needed. Android requires a visible foreground service for this kind of work. The user-visible reason is: <em>strict focus session protection and reboot recovery</em>. This is not a hidden tracker.</p>
+    </article>
+
+    <article class="card perm" id="wake">
+      <h2>Keep the device awake (briefly)</h2>
+      <p class="perm-id">Android: <code>WAKE_LOCK</code></p>
+      <p>Lets alarms and the session service run on time. It is not used to keep the screen on against your will.</p>
+    </article>
+
+    <article class="card perm" id="keyguard">
+      <h2>Know if the screen is locked</h2>
+      <p class="perm-id">Android: <code>DISABLE_KEYGUARD</code> (legacy name). Studic uses Keyguard APIs to <strong>detect</strong> whether the lock screen is showing.</p>
+      <p>This lets recovery and leave-handling wait until you unlock with your own PIN, pattern or biometrics, then show the timer. Studic does not remove your lock screen, does not learn your PIN, and does not bypass unlock.</p>
+    </article>
+
+    <article class="card perm" id="network">
+      <h2>Internet (from Google libraries, not a Studic server)</h2>
+      <p>Studic does not ship its own backend. The app can reach the network when you:</p>
+      <ul>
+        <li>Watch a rewarded ad (Google AdMob, with UMP consent where required)</li>
+        <li>Buy or restore a points pack (Google Play Billing)</li>
+        <li>Open Privacy, Terms, Help or this page inside the app</li>
+      </ul>
+      <p>Those libraries add their own network permission. Ads may use an advertising ID under Google&rsquo;s policies. Pro users do not see ads. Details: <a href="../privacy/#ads">Privacy Policy &mdash; Ads</a>.</p>
+    </article>
+
+    <article class="card perm" id="oem">
+      <h2>Phone-maker auto-start (not an Android permission)</h2>
+      <p>Some brands (for example Xiaomi, Oppo, Vivo, Huawei, Samsung) have an extra switch that can stop apps after you leave them. Studic cannot read whether that switch is on. The one-time setup may ask you to open that screen and turn Studic on, so a session is not killed in the background. If your phone has no such screen, skip it.</p>
+    </article>
+
+    <section class="card" id="turn-off">
+      <h2>How to turn permissions off</h2>
+      <ol class="steps">
+        <li>In Studic: <strong>Settings &rarr; Permissions Manager</strong> (status of Usage access, Device admin, overlay, battery, notifications) and <strong>Settings &rarr; Notifications Manager</strong> (session timer, hide other notifications, schedule skipped).</li>
+        <li>Auto-lock: <strong>Settings &rarr; Auto-lock during focus</strong> (on or off; default on).</li>
+        <li>In Android Settings: Apps &rarr; Studic, or Special app access, for Usage access, Device admin, Display over other apps, Battery, Notification access, and Alarms.</li>
+        <li>To remove Studic: <strong>Settings &rarr; Uninstall Studic</strong>. Android may ask you to turn Device admin off first. That is expected and allowed.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="play">
+      <h2>Notes for Google Play review</h2>
+      <p>Package: <code>com.amirsofteng.studic</code>. Category: productivity / focus (digital wellbeing). All sensitive access is tied to a session the user starts, or to an optional switch the user turns on.</p>
+      <dl class="rows">
+        <div>
+          <dt>Device admin</dt>
+          <dd>FORCE_LOCK / <code>lockNow</code> only, during a user-started Deep or Scheduled session, and only if Auto-lock is enabled. Not Device Owner. Not wipe. Not password. Not anti-uninstall.</dd>
+        </div>
+        <div>
+          <dt>Usage access</dt>
+          <dd>Foreground app during that session so allowed study apps stay available. Also powers an on-device Home usage chart after grant. No off-device app-graph.</dd>
+        </div>
+        <div>
+          <dt>Display over other apps</dt>
+          <dd>Short reboot-recovery UI if a strict session was already running. Not a daily overlay. Not ads.</dd>
+        </div>
+        <div>
+          <dt>Notification access</dt>
+          <dd>Optional. Off until the user enables Hide system notifications. Dismisses other apps&rsquo; shade posts only while a session runs. Does not upload notification content.</dd>
+        </div>
+        <div>
+          <dt>Foreground service (special use)</dt>
+          <dd>Visible session protection and reboot recovery, declared in the manifest property.</dd>
+        </div>
+        <div>
+          <dt>Accessibility</dt>
+          <dd>Not in the app. Not used as a fallback for blocking.</dd>
+        </div>
+      </dl>
+      <p>Privacy Policy: <a href="../privacy/">https://studic-app.github.io/privacy/</a>. This permissions page: <a href="./">https://studic-app.github.io/permissions/</a>.</p>
+    </section>
+
+    <section aria-label="More pages">
+      <div class="linklist">
+        <a href="../privacy/"><div>Privacy Policy<span>How information is stored and who sees ads</span></div></a>
+        <a href="../help/"><div>Help Center<span>Modes, points, setup and fixes</span></div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand"><img src="../assets/img/studic-mark.png" width="24" height="24" alt="" aria-hidden="true">&copy; 2026 AmirSoftEng. Studic is built for Android.</span>
+      <div class="footer-links">
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../permissions/">Permissions</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="../help/">Help Center</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

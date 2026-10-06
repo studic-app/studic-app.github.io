@@ -1,6 +1,6 @@
 # Studic web
 
-The Studic website: a landing page plus Privacy Policy, Terms of Service and Help Center, built for free hosting on GitHub Pages. Plain HTML, CSS and JavaScript. No build step, no dependencies, no cookies, no analytics, no third-party requests (the fonts are self-hosted).
+The Studic website: a landing page plus Privacy Policy, Permissions, Terms of Service and Help Center, built for free hosting on GitHub Pages. Plain HTML, CSS and JavaScript. No build step, no dependencies, no cookies, no analytics, no third-party requests (the fonts are self-hosted).
 
 It has two looks from the same files:
 
@@ -10,7 +10,8 @@ It has two looks from the same files:
 | URL | File | Purpose |
 |:---|:---|:---|
 | `/` | `index.html` | Landing page (features, modes, how it works, FAQ) |
-| `/privacy/` | `privacy/index.html` | Privacy Policy (use this URL in the Play Console) |
+| `/privacy/` | `privacy/index.html` | Privacy Policy (use this URL in the Play Console Data safety form) |
+| `/permissions/` | `permissions/index.html` | Every Android permission, purpose, and what Studic never does (use this URL in Play permission declarations) |
 | `/terms/` | `terms/index.html` | Terms of Service |
 | `/help/` | `help/index.html` | Help Center |
 | any missing page | `404.html` | Page not found |
@@ -30,12 +31,13 @@ The app opens these pages in an in-app web view, so the user never leaves Studic
 - the URL has `?embed=1`, or
 - the WebView user agent contains `StudicApp/<version>`
 
-Optional: `?theme=light` or `?theme=dark` makes the page match the app theme. Without it the page follows the system theme. Links between the three pages automatically keep `embed` and `theme`.
+Optional: `?theme=light` or `?theme=dark` makes the page match the app theme. Without it the page follows the system theme. Links between these pages automatically keep `embed` and `theme`.
 
 Examples:
 
 ```
 https://studic-app.github.io/privacy/?embed=1&theme=light
+https://studic-app.github.io/permissions/?embed=1&theme=light
 https://studic-app.github.io/terms/?embed=1&theme=dark
 https://studic-app.github.io/help/?embed=1
 ```
@@ -58,7 +60,7 @@ Open <http://localhost:8000/> (or `/privacy/?embed=1&theme=light`). In the brows
 | `software.engineer.amir@gmail.com` | `privacy/`, `terms/`, `help/` | the support email, if you change it |
 | `studic-app.github.io` | `robots.txt`, `sitemap.xml`, the app's `StudicWebLinks.BASE_URL` | the site address, if you move it |
 | `<base href="/">` | `404.html` | `/` for a `<user>.github.io` repo or custom domain; `/<repo-name>/` for a project repo |
-| `Last updated` dates | the three pages | the day you change the text |
+| `Last updated` dates | privacy, permissions, terms | the day you change the text |
 
 ## Deploy on GitHub Pages
 
@@ -82,4 +84,4 @@ All page links are relative, so both options work. Wait a minute or two, then op
 
 ## When the app changes
 
-The copy in these pages is based on the app code: points costs, packs, break rules, permissions, ads and backups. When you change `WalletRules`, `SessionRules`, permissions in `AndroidManifest.xml` or add an SDK, update the matching page and its "Last updated" date. In particular, any new SDK that collects data must be added to the Privacy Policy.
+The copy in these pages is based on the app code: points costs, packs, break rules, permissions, ads and backups. When you change `WalletRules`, `SessionRules`, permissions in `AndroidManifest.xml` or add an SDK, update the matching page and its "Last updated" date. In particular, any new SDK that collects data must be added to the Privacy Policy, and any new sensitive permission must be added to `/permissions/`.
