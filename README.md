@@ -15,13 +15,14 @@ It has two looks from the same files:
 | `/terms/` | `terms/index.html` | Terms of Service |
 | `/help/` | `help/index.html` | Help Center |
 | any missing page | `404.html` | Page not found |
+| `/app-ads.txt` | `app-ads.txt` | AdMob authorization file (not a page; crawlers fetch it) |
 
 ```
 assets/css/style.css   all styles + light/dark tokens copied from the app theme
 assets/js/main.js      embed mode, theme, link params (loaded in <head>)
 assets/fonts/          Literata + Plus Jakarta Sans (subset from the app's own fonts)
 assets/img/            Studic logos copied from the app (wordmark light/dark, mark, favicon, touch icon)
-.nojekyll, robots.txt, sitemap.xml
+.nojekyll, robots.txt, sitemap.xml, app-ads.txt
 ```
 
 ## Loading the pages inside the Studic app
