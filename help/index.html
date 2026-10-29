@@ -44,6 +44,7 @@
       <span class="eyebrow">Studic</span>
       <h1>Help <span class="gradient-text">Center</span></h1>
       <p class="lead">Quick answers about focus modes, points and fixing common problems.</p>
+      <p class="meta">Last updated: 29 October 2026</p>
       <nav class="doc-tabs" aria-label="Pages">
         <a href="../privacy/">Privacy Policy</a>
         <a href="../permissions/">Permissions</a>
@@ -109,8 +110,8 @@
         <summary>Normal mode</summary>
         <div class="acc-body">
           <ul class="checks">
-            <li>Free. It does not use points.</li>
-            <li>Does not block any apps.</li>
+            <li>Free.</li>
+            <li>All your apps stay available.</li>
             <li>You can tap <strong>Stop</strong> any time.</li>
           </ul>
         </div>
@@ -120,9 +121,9 @@
         <summary>Deep mode</summary>
         <div class="acc-body">
           <ul class="checks">
-            <li>Strict. <strong>No early exit</strong>: the session ends when the timer ends.</li>
-            <li>Only your study apps (plus Phone and Messages) work. Other apps stay closed.</li>
-            <li>Uses points when it starts. See <a href="#points">Points &amp; Pro</a>.</li>
+            <li>Strict. The session ends when the timer ends.</li>
+            <li>You choose study apps and break apps. Phone, Messages, Gmail and Maps stay open.</li>
+            <li>Starting is free. Study apps cost points when you open them. See <a href="#points">Points &amp; Pro</a>.</li>
             <li>Needs the quick one-time setup.</li>
           </ul>
           <p><strong>How long:</strong> 15 min, 30 min, 45 min, 1 hour, then every hour from 2 hours up to 12 hours.</p>
@@ -132,7 +133,7 @@
       <details class="acc">
         <summary>Scheduled mode</summary>
         <div class="acc-body">
-          <p>Set a daily study time and Studic starts a strict session for you. It follows the same rules, points and breaks as Deep.</p>
+          <p>Set a study time and Studic starts a strict session for you. It follows the same lock, apps and breaks as Deep. Creating a schedule is free, and starting it is free.</p>
           <p>Open <strong>Modes &rarr; Schedule &rarr; Manage</strong>, then add a schedule with:</p>
           <ul>
             <li>A name, start time and end time</li>
@@ -140,7 +141,8 @@
             <li><strong>Auto-start</strong> on or off</li>
           </ul>
           <p>Each schedule can be up to 12 hours, and all your schedules together can add up to 12 hours. Schedules that overlap can&rsquo;t be saved.</p>
-          <p>When a schedule starts and you are in another app, Studic brings you back to your timer. If Auto-lock during focus is on, it also locks the screen. If a Normal session is running, it stops and the strict session begins. If you do not have enough points at that moment, auto-start is switched off for that schedule.</p>
+          <p>When a schedule starts and you are in another app, Studic brings you back to your timer. If Auto-lock during focus is on, it also locks the screen. If a Normal session is running, it stops and the strict session begins.</p>
+          <p>Study apps cost points when you open them on the timer. If a Deep session is already running, the schedule waits. When Deep ends, it starts for the time still left in the window.</p>
         </div>
       </details>
     </section>
@@ -152,12 +154,11 @@
         <summary>Which apps can I use?</summary>
         <div class="acc-body">
           <ul>
-            <li><strong>Study apps:</strong> open during focus time and during breaks.</li>
-            <li><strong>Break apps:</strong> open only during a break.</li>
-            <li><strong>Phone and Messages</strong> always work.</li>
-            <li>2 study apps and 2 break apps are included free. Each extra app costs 3 points, shown before you confirm.</li>
-            <li>Your phone&rsquo;s home screen stays closed during focus time and opens during a break.</li>
-            <li>Your phone&rsquo;s Settings stay closed until the session ends.</li>
+            <li><strong>Study apps</strong> open during focus and during a break. Each one costs 3 points, once in that session, the first time you open Study Apps on the timer. Until then, those apps stay closed.</li>
+            <li><strong>Break apps</strong> are free. They open only during a break.</li>
+            <li><strong>Phone, Messages, Gmail and Maps</strong> always work, for free.</li>
+            <li>Your home screen stays closed during focus and during a break.</li>
+            <li>Settings stays closed until the session ends, unless you added that app yourself.</li>
           </ul>
         </div>
       </details>
@@ -184,8 +185,8 @@
             <div><dt>Over 8 up to 12 hours</dt><dd>6 breaks</dd></div>
           </dl>
           <ul>
-            <li>Each break lasts 15 minutes and costs 3 points when it starts.</li>
-            <li><strong>Resume Focus</strong> ends a break early. The points are not returned.</li>
+            <li>Each break lasts 15 minutes and costs 3 points. You need at least 60 minutes left on the timer.</li>
+            <li><strong>Resume Focus</strong> ends a break early.</li>
             <li>Your timer shows how many breaks you have left.</li>
           </ul>
         </div>
@@ -194,14 +195,14 @@
       <details class="acc">
         <summary>Can I stop a Deep or Scheduled session early?</summary>
         <div class="acc-body">
-          <p>No, and that is the point. There is no End button, so choose a length you can finish. Phone and Messages still work if you need to reach someone. If you are new, start with 15 or 30 minutes.</p>
+          <p>The session runs until the timer ends, so choose a length you can finish. Phone, Messages, Gmail and Maps still work. If you are new, start with 15 or 30 minutes.</p>
         </div>
       </details>
 
       <details class="acc">
         <summary>What if my phone restarts during a session?</summary>
         <div class="acc-body">
-          <p>Studic shows a short screen, brings your session back and may add some extra time to what is left. If a Scheduled session was already running when the phone started, it carries on without extra time.</p>
+          <p>If a Deep or Scheduled session is still running, Studic brings it back and adds 1 hour to the time left. If the session had already ended, nothing is added.</p>
         </div>
       </details>
     </section>
@@ -213,13 +214,14 @@
         <summary>What do points pay for?</summary>
         <div class="acc-body">
           <dl class="rows">
-            <div><dt>Start a Deep session</dt><dd>5 points</dd></div>
-            <div><dt>Start a Scheduled session</dt><dd>5 points</dd></div>
-            <div><dt>Each extra study or break app</dt><dd>3 points (2 of each are free)</dd></div>
-            <div><dt>Each break</dt><dd>3 points</dd></div>
+            <div><dt>Start Deep or a schedule</dt><dd>Free</dd></div>
+            <div><dt>Create a schedule</dt><dd>Free</dd></div>
+            <div><dt>Each study app</dt><dd>3 points, once per session</dd></div>
+            <div><dt>Break apps</dt><dd>Free</dd></div>
+            <div><dt>Each break you take</dt><dd>3 points</dd></div>
             <div><dt>Normal mode</dt><dd>Free</dd></div>
           </dl>
-          <p>Points are used when a session starts or a break begins. Finishing a session does not earn points.</p>
+          <p>The study-app cost is charged the first time you open Study Apps on the timer. A break is charged when it starts. Your points stay until you spend them.</p>
         </div>
       </details>
 
@@ -227,11 +229,10 @@
         <summary>How do I get points?</summary>
         <div class="acc-body">
           <ul>
-            <li><strong>Daily top-up:</strong> at midnight, if you have 12 points or fewer, Studic tops you back up to 12 (Starter only).</li>
-            <li><strong>Watch an ad:</strong> +15 points when the ad finishes (needs internet; hidden if you are Pro). Up to 5 successful ads per day, with a short wait between them.</li>
-            <li><strong>Buy a pack</strong> in the store. Any pack makes you Pro while your balance stays at 12 or more.</li>
+            <li><strong>Watch an ad:</strong> +15 points when the ad finishes. You need internet. Up to 5 ads a day, with 2 minutes between them. Hidden while you are Pro.</li>
+            <li><strong>Buy a pack.</strong> Any pack makes you Pro while you still have 3 or more points.</li>
           </ul>
-          <p>Sharing Studic with a friend opens your phone&rsquo;s share menu and does <strong>not</strong> add points. You can find Watch ad from the side menu, Home, session complete, or when you need more points.</p>
+          <p>Your points stay until you spend them. You can watch an ad from Home, the side menu, when a session ends, or while you are setting up.</p>
         </div>
       </details>
 
@@ -239,11 +240,11 @@
         <summary>What points packs are there?</summary>
         <div class="acc-body">
           <dl class="rows">
-            <div><dt>Starter</dt><dd>450 points &middot; US$1.99</dd></div>
-            <div><dt>Popular</dt><dd>950 points &middot; US$2.99</dd></div>
-            <div><dt>Ultimate</dt><dd>2,100 points &middot; US$3.99</dd></div>
+            <div><dt>Starter pack</dt><dd>450 points &middot; US$1.99</dd></div>
+            <div><dt>Popular pack</dt><dd>950 points &middot; US$2.99</dd></div>
+            <div><dt>Ultimate pack</dt><dd>2,100 points &middot; US$3.99</dd></div>
           </dl>
-          <p>Google Play shows the price for your country when you buy. Packs are one-time purchases, not subscriptions, and your points do not expire.</p>
+          <p>Google Play shows the price for your country when you buy. Packs are one-time purchases. Your points stay until you spend them.</p>
         </div>
       </details>
 
@@ -251,12 +252,11 @@
         <summary>What is Pro?</summary>
         <div class="acc-body">
           <ul class="checks">
-            <li>Buying any points pack makes you a Pro user.</li>
-            <li>No ads while you are Pro.</li>
-            <li>No free midnight top-up. You keep the points you have.</li>
-            <li>Session prices stay the same.</li>
+            <li><strong>Starter:</strong> under 3 points.</li>
+            <li><strong>Plus:</strong> 3 or more points, and you are not Pro.</li>
+            <li><strong>Pro:</strong> you bought a pack and you still have 3 or more points. Ads are hidden.</li>
           </ul>
-          <p>Pro stays active while you have 12 or more points. If you drop below 12, Pro pauses until you buy a pack or earn your points back up.</p>
+          <p>If your balance drops under 3, Pro ends and you are Starter again. Your old purchases stay in Purchase History. The next ad makes you Plus. Buying a pack again makes you Pro again.</p>
         </div>
       </details>
 
@@ -275,7 +275,7 @@
       <details class="acc">
         <summary>&ldquo;Not enough points&rdquo;</summary>
         <div class="acc-body">
-          <p>Points saved for your auto-start schedules can&rsquo;t be spent elsewhere. The message shows what you have, what is saved and what you need. Earn or buy more points, or choose fewer extra apps.</p>
+          <p>On the timer, tap OK. While you are setting up, you can watch an ad or buy a pack.</p>
         </div>
       </details>
     </section>
@@ -290,7 +290,7 @@
           <ol class="steps">
             <li><strong>Usage access</strong>: so Studic knows which app is on screen during the session you started.</li>
             <li><strong>Device admin</strong>: so Studic can lock the screen when you leave, if Auto-lock is on. Lock-screen only; it cannot wipe the phone or change your password.</li>
-            <li><strong>Display over other apps</strong>: a short recovery screen if the phone restarts mid-session. Not a daily overlay.</li>
+            <li><strong>Display over other apps</strong>: a full-screen recovery screen if the phone restarts mid-session. Not used for ads.</li>
             <li><strong>Background running</strong>: so your phone does not stop Studic mid-session.</li>
             <li><strong>Auto-start</strong>: only on phones that have this extra switch.</li>
           </ol>
@@ -324,16 +324,15 @@
           <ul>
             <li><strong>Session timer</strong> (on by default): remaining time while you focus. Turn off if you do not want that on the lock screen.</li>
             <li><strong>Hide system notifications</strong> (off until you allow Notification access): during a session, dismisses other apps&rsquo; shade notifications. Study apps stay; alarms and calls stay. Notification text is not uploaded.</li>
-            <li><strong>Schedule skipped</strong> (on by default): a notice if a window cannot start because of points.</li>
           </ul>
-          <p>There is no Settings row for the quiet focus reminder. After you have completed sessions, Studic may ping at your usual start hour if you miss a day (daily habit) or on quiet day 3 and 4 otherwise. Opening Studic resets that streak. Studic does not send sales alerts.</p>
+          <p>After you have completed sessions, Studic may remind you at your usual start hour if you miss a day, or on quiet day 3 and 4. Opening Studic starts that count again.</p>
         </div>
       </details>
 
       <details class="acc">
         <summary>Notifications are off</summary>
         <div class="acc-body">
-          <p>Allow notifications for Studic so you can see the timer, skip notice and reminder. If they stay off, Studic still works; scheduled sessions can still start. Use Notifications Manager or Android Settings to allow them again.</p>
+          <p>Allow notifications for Studic so you can see the timer and the quiet reminder. If they stay off, Studic still works, and scheduled sessions can still start. Use Notifications Manager or Android Settings to allow them again.</p>
         </div>
       </details>
     </section>
@@ -396,7 +395,7 @@
           <ul>
             <li>The one-time setup must be finished.</li>
             <li><strong>Auto-start</strong> must be on for that schedule.</li>
-            <li>You need enough free points when it starts.</li>
+            <li>If a Deep session was running, the schedule starts only for the time still left after Deep ends.</li>
             <li>Check background running and auto-start (above), and that your phone was switched on.</li>
             <li>Allow alarms and reminders for Studic if your phone asks.</li>
           </ul>
@@ -406,7 +405,7 @@
       <details class="acc">
         <summary>&ldquo;No ad available&rdquo; or &ldquo;You&rsquo;re offline&rdquo;</summary>
         <div class="acc-body">
-          <p>Turn on Wi-Fi or mobile data and try again. Sometimes no ad is ready, so try again a little later. You can review your ad choice any time with <strong>Ad privacy settings</strong> on the Watch ad screen.</p>
+          <p>Turn on Wi-Fi or mobile data. If no ad is ready, tap OK, then open Watch ad later. You can review your ad choice any time with <strong>Ad privacy settings</strong> on the Watch ad screen.</p>
         </div>
       </details>
 

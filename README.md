@@ -61,7 +61,7 @@ Open <http://localhost:8000/> (or `/privacy/?embed=1&theme=light`). In the brows
 | `software.engineer.amir@gmail.com` | `privacy/`, `terms/`, `help/` | the support email, if you change it |
 | `studic-app.github.io` | `robots.txt`, `sitemap.xml`, the app's `StudicWebLinks.BASE_URL` | the site address, if you move it |
 | `<base href="/">` | `404.html` | `/` for a `<user>.github.io` repo or custom domain; `/<repo-name>/` for a project repo |
-| `Last updated` dates | privacy, permissions, terms | the day you change the text |
+| `Last updated` dates | privacy, permissions, terms, help | the day you change the text |
 
 ## Deploy on GitHub Pages
 

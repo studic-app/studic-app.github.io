@@ -43,7 +43,7 @@
     <div class="container">
       <span class="eyebrow">Studic</span>
       <h1>App <span class="gradient-text">permissions</span></h1>
-      <p class="meta">Last updated: 7 October 2026</p>
+      <p class="meta">Last updated: 29 October 2026</p>
       <nav class="doc-tabs" aria-label="Pages">
         <a href="../privacy/">Privacy Policy</a>
         <a href="./" aria-current="page">Permissions</a>
@@ -54,7 +54,7 @@
   </section>
 
   <main class="page" id="main">
-    <p class="meta embed-only">Last updated: 7 October 2026</p>
+    <p class="meta embed-only">Last updated: 29 October 2026</p>
 
     <section class="card summary" id="summary">
       <h2>The short version</h2>
@@ -125,12 +125,11 @@
       <div class="badge-row"><span class="badge">Asked at first launch</span></div>
       <p class="perm-id">Android: <code>POST_NOTIFICATIONS</code></p>
       <h4>Why Studic asks</h4>
-      <p>To show the remaining session time, a notice when a scheduled session cannot start, and an occasional quiet reminder if you have not focused for a few days.</p>
+      <p>To show the remaining session time, and an occasional quiet reminder if you have not focused for a few days.</p>
       <h4>What it does</h4>
       <ul class="checks">
         <li>Session timer on the lock screen / shade while you focus (you can turn this channel off in <strong>Settings &rarr; Notifications Manager</strong>)</li>
-        <li>&ldquo;Schedule skipped&rdquo; if a window cannot start because of points</li>
-        <li>A history-based focus reminder (no Settings row; only after you have completed sessions)</li>
+        <li>A quiet focus reminder (no Settings row; only after you have completed sessions)</li>
       </ul>
       <h4>What it never does</h4>
       <ul class="crosses">
@@ -138,7 +137,7 @@
         <li>Notifications from other apps (that is a different, optional permission below)</li>
       </ul>
       <h4>If you turn it off</h4>
-      <p>Studic still works. You may miss the timer, skip notice and reminder. You can allow notifications again from Notifications Manager or Android Settings.</p>
+      <p>Studic still works. You may miss the timer and the reminder. You can allow notifications again from Notifications Manager or Android Settings.</p>
     </article>
 
     <article class="card perm" id="usage">
@@ -146,7 +145,7 @@
       <div class="badge-row"><span class="badge">Deep &amp; Scheduled</span></div>
       <p class="perm-id">Android: <code>PACKAGE_USAGE_STATS</code> (Usage access)</p>
       <h4>User-facing purpose</h4>
-      <p>This is the core of strict focus: Studic needs to know <strong>which app is currently on screen</strong> so that, during a session <em>you started</em>, only your chosen study apps (plus Phone and Messages) stay available, and other apps are closed.</p>
+      <p>This is the core of strict focus: Studic needs to know <strong>which app is currently on screen</strong> so that, during a session <em>you started</em>, only your chosen study apps stay available. Phone, Messages, Gmail and Maps always stay available. Other apps are closed.</p>
       <h4>What Studic uses</h4>
       <ul class="checks">
         <li>The foreground app&rsquo;s name / package during an active Deep or Scheduled session, so allowed apps stay and other apps do not</li>
@@ -193,7 +192,7 @@
       <div class="badge-row"><span class="badge">Deep &amp; Scheduled</span></div>
       <p class="perm-id">Android: <code>SYSTEM_ALERT_WINDOW</code></p>
       <h4>User-facing purpose</h4>
-      <p>If the phone <strong>restarts while a Deep or Scheduled session is still running</strong>, Android may not allow a normal activity to appear on the lock screen. Studic then shows a short recovery screen (about 5 seconds) so you can continue the session you already started. This is not a daily blocking overlay and it is not shown in Normal mode.</p>
+      <p>If the phone <strong>restarts while a Deep or Scheduled session is still running</strong>, Android may not allow a normal screen to appear on the lock screen. Studic then shows a full-screen recovery screen so you can continue the session you already started. This is not used for ads, and it is not shown in Normal mode.</p>
       <h4>What it never does</h4>
       <ul class="crosses">
         <li>Draw ads, spam, or a permanent layer over other apps</li>
@@ -244,14 +243,14 @@
       <h2>Run at startup</h2>
       <div class="badge-row"><span class="badge">Deep &amp; Scheduled recovery</span></div>
       <p class="perm-id">Android: <code>RECEIVE_BOOT_COMPLETED</code> (including locked-boot)</p>
-      <p>If the phone restarts during a Deep or Scheduled session that was already running, Studic can restart its protection and show the short recovery screen. It does not start a new session from a reboot by itself. Normal mode does not use this for a lock overlay.</p>
+      <p>If the phone restarts during a Deep or Scheduled session that was already running, Studic can restart its protection and show the full-screen recovery screen. It does not start a new session from a reboot by itself. Normal mode does not use this for a lock screen.</p>
     </article>
 
     <article class="card perm" id="fgs">
       <h2>Foreground service (special use)</h2>
       <div class="badge-row"><span class="badge">While a session or recovery is active</span></div>
       <p class="perm-id">Android: <code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></p>
-      <p>Keeps the session timer and protection running while you focus, and runs the short boot-recovery screen if needed. Android requires a visible foreground service for this kind of work. You will see Studic&rsquo;s notification while it runs. Its purpose is <em>focus session protection and recovery after a restart</em>. It stops when the session ends, and it is not a hidden tracker.</p>
+      <p>Keeps the session timer and protection running while you focus, and runs the full-screen recovery screen if the phone restarts mid-session. Android requires a visible notification for this kind of work. You will see Studic&rsquo;s notification while it runs. Its purpose is <em>focus session protection and recovery after a restart</em>. It stops when the session ends, and it is not a hidden tracker.</p>
     </article>
 
     <article class="card perm" id="wake">
@@ -285,7 +284,7 @@
     <section class="card" id="turn-off">
       <h2>How to turn permissions off</h2>
       <ol class="steps">
-        <li>In Studic: <strong>Settings &rarr; Permissions Manager</strong> (status of Usage access, Device admin, overlay, battery, notifications) and <strong>Settings &rarr; Notifications Manager</strong> (session timer, hide other notifications, schedule skipped).</li>
+        <li>In Studic: <strong>Settings &rarr; Permissions Manager</strong> (status of Usage access, Device admin, overlay, battery, notifications) and <strong>Settings &rarr; Notifications Manager</strong> (session timer, hide other notifications).</li>
         <li>Auto-lock: <strong>Settings &rarr; Auto-lock during focus</strong> (on or off; default on).</li>
         <li>In Android Settings: Apps &rarr; Studic, or Special app access, for Usage access, Device admin, Display over other apps, Battery, Notification access, and Alarms.</li>
         <li>To remove Studic: <strong>Settings &rarr; Uninstall Studic</strong>. Android may ask you to turn Device admin off first. That is expected and allowed.</li>
@@ -302,11 +301,11 @@
         </div>
         <div>
           <dt>Usage access</dt>
-          <dd>Lets Studic see which app is in front during a session, so your study apps stay available and distractions are sent back to the timer. It also draws the usage chart on your Home screen, on your phone only.</dd>
+          <dd>Lets Studic see which app is in front during a session, so your study apps stay available and other apps are sent back to the timer. Phone, Messages, Gmail and Maps always stay available. The usage chart on Home stays on your phone.</dd>
         </div>
         <div>
           <dt>Display over other apps</dt>
-          <dd>Only for the short recovery screen if your phone restarts in the middle of a Deep or Scheduled session.</dd>
+          <dd>A full-screen recovery screen if your phone restarts in the middle of a Deep or Scheduled session. Not used for ads.</dd>
         </div>
         <div>
           <dt>Notification access</dt>
