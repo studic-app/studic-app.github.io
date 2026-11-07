@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Privacy Policy — Studic</title>
-  <meta name="description" content="How Studic treats your information: no account needed, your study data stays on your phone, and you are always in control.">
+  <meta name="description" content="How Studic treats your information: no account needed, your study data stays on your phone, and a few anonymous usage events may be sent to Google Firebase.">
   <meta name="theme-color" content="#ffb076">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/icon-192.png">
@@ -43,7 +43,7 @@
     <div class="container">
       <span class="eyebrow">Studic</span>
       <h1>Privacy <span class="gradient-text">Policy</span></h1>
-      <p class="meta">Last updated: 29 October 2026</p>
+      <p class="meta">Last updated: 8 November 2026</p>
       <nav class="doc-tabs" aria-label="Pages">
         <a href="./" aria-current="page">Privacy Policy</a>
         <a href="../permissions/">Permissions</a>
@@ -54,14 +54,15 @@
   </section>
 
   <main class="page" id="main">
-    <p class="meta embed-only">Last updated: 29 October 2026</p>
+    <p class="meta embed-only">Last updated: 8 November 2026</p>
 
     <section class="card summary" id="summary">
       <h2>The short version</h2>
       <ul class="checks">
         <li><strong>No account needed.</strong> Studic never asks for your name, email or phone number.</li>
         <li><strong>Your study data stays on your phone.</strong> Your sessions, points, schedules and history are saved on your device.</li>
-        <li><strong>Internet only when you choose.</strong> For example, when you watch an ad to earn points or buy a points pack.</li>
+        <li><strong>A few anonymous usage events.</strong> When the phone is online, Studic may tell Google Firebase that you finished a step, such as onboarding or a first session. It does not send your name, the apps you picked, or your points.</li>
+        <li><strong>Internet for those events, ads and purchases.</strong> Focus still works offline. You also go online when you watch an ad or buy a points pack.</li>
         <li><strong>You are in control.</strong> You can turn off any permission, or remove everything by uninstalling Studic.</li>
       </ul>
     </section>
@@ -75,6 +76,7 @@
         <li><a href="#ads">Ads</a></li>
         <li><a href="#purchases">Purchases</a></li>
         <li><a href="#sharing">Sharing Studic</a></li>
+        <li><a href="#analytics">Anonymous usage</a></li>
         <li><a href="#backups">Backups</a></li>
         <li><a href="#not-collected">What we don&rsquo;t collect</a></li>
         <li><a href="#website">This website</a></li>
@@ -94,7 +96,7 @@
 
     <section class="card" id="stored">
       <h2>What Studic saves on your phone</h2>
-      <p>To work properly, Studic remembers the following on your phone. It stays on your device and we cannot see it.</p>
+      <p>To work properly, Studic remembers the following on your phone. This list stays on your device. We cannot see it. The anonymous events in <a href="#analytics">Anonymous usage</a> are separate, and they do not include this detail.</p>
       <dl class="rows">
         <div>
           <dt>Your focus history</dt>
@@ -121,7 +123,7 @@
           <dd>Used only on the phone to time a quiet focus reminder. Opening the app resets that quiet streak.</dd>
         </div>
       </dl>
-      <div class="callout info">Studic does <strong>not</strong> keep a cloud list of the apps you open. During a Deep or Scheduled session it checks the name of the app on screen so allowed study apps stay available. If Usage access is granted, Home can also show an on-device app-usage chart; those totals are not uploaded.</div>
+      <div class="callout info">Studic does <strong>not</strong> keep a cloud list of the apps you open. During a Deep or Scheduled session it checks the name of the app on screen so allowed study apps stay available. If Usage access is granted, Home can also show an on-device app-usage chart for Today, Yesterday and This week. Those totals are not uploaded.</div>
     </section>
 
     <section class="card" id="permissions">
@@ -180,6 +182,24 @@
       <p>When you tap Share, your phone&rsquo;s normal share menu opens with a short message and the Play Store link. You choose the app and the person.</p>
     </section>
 
+    <section class="card" id="analytics">
+      <h2>Anonymous usage</h2>
+      <p>Studic uses <strong>Google Firebase Analytics</strong> so we can see which steps people finish, such as onboarding, strict setup, a first focus session and a first points purchase. This helps us improve the app. It is not used to sell your information, and it is not tied to your name, email or phone number.</p>
+      <p>Focus still works with no internet. When the phone is online, Studic may send a small number of anonymous events. Most are sent only once for that install. Opening the points pack screen is counted each time you open it. If the phone is offline, the event waits on the device and can be sent later. Uninstalling before any connection can mean that waiting event is never sent.</p>
+      <p>Those events can say:</p>
+      <ul>
+        <li>You finished onboarding, or you finished strict setup.</li>
+        <li>The setup step you were on if you left before setup was complete, such as usage access, device admin, display over other apps, battery or the phone-brand keep-alive step. Only the step name is sent.</li>
+        <li>The first time you start Normal, Deep or Scheduled, and the first time you finish Deep or Scheduled.</li>
+        <li>The first time you save a schedule.</li>
+        <li>That you opened the points pack screen, and the first time a pack purchase succeeds. The price, the pack and the order number are not sent.</li>
+        <li>The first rewarded ad that pays, including how many seconds the video was open, or the first attempt that does not pay, with a short reason such as no ad, closed early or offline.</li>
+      </ul>
+      <p>We do not send the names of the apps you picked, your points balance, your session history, your messages, or anything you type. People who already finished a step before this tracking existed are not counted for that step.</p>
+      <p>Firebase also receives basic device information that Google collects for analytics, such as an app instance ID, device model, Android version, language, and a rough country based on your IP address. If your phone has an advertising ID, Google may receive that too. You can reset or delete the advertising ID in your phone&rsquo;s Settings under Privacy &rarr; Ads.</p>
+      <p>We do not use crash reporting, and we do not export these events to BigQuery. Learn more in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy and security</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+    </section>
+
     <section class="card" id="backups">
       <h2>Backups</h2>
       <h3>Your backup file</h3>
@@ -195,6 +215,7 @@
         <li>Your messages, emails or passwords</li>
         <li>Anything you type or view inside other apps, or a cloud copy of your browsing history</li>
         <li>The text of other apps&rsquo; notifications</li>
+        <li>The names of the apps you chose, your points balance, or your payment details</li>
         <li>Your contacts, photos, camera, microphone or files (except a backup file you choose to save or open)</li>
         <li>Your exact location</li>
       </ul>
@@ -210,7 +231,7 @@
     <section class="card" id="retention">
       <h2>Keeping and deleting your data</h2>
       <p>Your data lives on your phone, so you decide how long it stays. Uninstalling Studic (<strong>Settings &rarr; Uninstall Studic</strong>, or through Android) removes it. You can also clear Studic&rsquo;s storage in your phone&rsquo;s app settings.</p>
-      <p>Copies outside the app are separate: a backup file you saved, your phone&rsquo;s cloud backup, and information Google holds for ads and purchases. You can manage those yourself or in your Google account.</p>
+      <p>Copies outside the app are separate: a backup file you saved, your phone&rsquo;s cloud backup, anonymous usage events held by Google Firebase, and information Google holds for ads and purchases. You can manage those yourself or in your Google account. Google keeps analytics events under its own retention settings. We do not keep a separate copy.</p>
     </section>
 
     <section class="card" id="children">
@@ -220,7 +241,7 @@
 
     <section class="card" id="rights">
       <h2>Your choices</h2>
-      <p>Because your Studic data is on your phone, you can see it in the app, save a copy with the backup feature, and remove it by uninstalling. For information held by Google, use Google&rsquo;s privacy tools. If you have any questions, contact us below.</p>
+      <p>Because your sessions, points and settings are on your phone, you can see them in the app, save a copy with the backup feature, and remove them by uninstalling. For anonymous usage events, ads and purchases held by Google, use Google&rsquo;s privacy tools, including resetting your advertising ID. If you have any questions, contact us below.</p>
     </section>
 
     <section class="card" id="changes">
