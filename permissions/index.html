@@ -84,7 +84,7 @@
         <li><a href="#fgs">Foreground service</a></li>
         <li><a href="#wake">Keep the device awake (briefly)</a></li>
         <li><a href="#keyguard">Know if the screen is locked</a></li>
-        <li><a href="#network">Internet (usage events, ads and Play purchases)</a></li>
+        <li><a href="#network">Internet (usage counts, ads and Play purchases)</a></li>
         <li><a href="#oem">Phone-maker auto-start</a></li>
         <li><a href="#turn-off">How to turn permissions off</a></li>
         <li><a href="#glance">Permissions at a glance</a></li>
@@ -102,7 +102,7 @@
         <li>A permanent uninstall block. You uninstall from <strong>Settings &rarr; Uninstall Studic</strong> (turn Device admin off there first if Android asks)</li>
         <li>Contacts, SMS, call logs, camera, microphone, precise location, or full storage access</li>
         <li>Reading the body of other apps&rsquo; notifications to advertise or to send off the phone</li>
-        <li>A Studic account or Studic server. Sessions, points and settings stay on the device unless you export a backup file yourself. A few anonymous usage events may be sent to Google Firebase, as described in the <a href="../privacy/#analytics">Privacy Policy</a></li>
+        <li>A Studic account or Studic server. Sessions, points and settings stay on the device unless you export a backup file yourself. Studic may send a few simple usage counts to Google Firebase. See the <a href="../privacy/#analytics">Privacy Policy</a></li>
       </ul>
     </section>
 
@@ -267,14 +267,14 @@
 
     <article class="card perm" id="network">
       <h2>Internet (from Google libraries, not a Studic server)</h2>
-      <p>Studic does not ship its own backend. Focus still works offline. The app can reach the network when:</p>
+      <p>Studic has no server of its own, and it works offline. The app uses the internet when:</p>
       <ul>
-        <li>It sends the anonymous usage events described in the <a href="../privacy/#analytics">Privacy Policy</a> (Google Firebase Analytics)</li>
+        <li>It sends the simple usage counts in the <a href="../privacy/#analytics">Privacy Policy</a> (Google Firebase)</li>
         <li>You watch a rewarded ad (Google AdMob, with UMP consent where required)</li>
         <li>You buy or restore a points pack (Google Play Billing)</li>
         <li>You open Privacy, Terms, Help or this page inside the app</li>
       </ul>
-      <p>Those libraries add their own network permission. Ads and analytics may use an advertising ID under Google&rsquo;s policies. Pro users do not see ads. Details: <a href="../privacy/#ads">Privacy Policy &mdash; Ads</a> and <a href="../privacy/#analytics">Anonymous usage</a>.</p>
+      <p>Those libraries add their own network permission. Ads and usage counts may use an advertising ID under Google&rsquo;s rules. Pro users do not see ads. Details: <a href="../privacy/#ads">Privacy Policy &mdash; Ads</a> and <a href="../privacy/#analytics">Usage counts</a>.</p>
     </article>
 
     <article class="card perm" id="oem">
